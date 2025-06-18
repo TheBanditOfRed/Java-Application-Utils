@@ -39,6 +39,8 @@ public class AppDataManager {
      * Windows: %LOCALAPPDATA%/[AppName]/data
      * macOS: ~/Library/Application Support/[AppName]/data
      * Linux: ~/.config/[AppName]/data
+     * 
+     * @return Data directory path
      */
     public static String getUserDataDirectory() {
         String os = System.getProperty("os.name").toLowerCase();
@@ -64,6 +66,8 @@ public class AppDataManager {
     
     /**
      * Gets the logs directory.
+     * 
+     * @return Log directory path
      */
     public static String getLogsDirectory() {
         String os = System.getProperty("os.name").toLowerCase();
@@ -126,6 +130,9 @@ public class AppDataManager {
     
     /**
      * Gets the full path for a data file in the user data directory.
+     * @param fileName Name if file
+     * 
+     * @return Data file path
      */
     public static String getDataFilePath(String fileName) {
         return getUserDataDirectory() + File.separator + fileName;
